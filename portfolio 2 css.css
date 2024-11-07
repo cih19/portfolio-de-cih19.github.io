@@ -1,0 +1,77 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: century; /* Correction ici */
+}
+
+header {
+    background-image: url('file:///D:/Users/cyuceer/Downloads/image/9-formation-informatique-metiers.jpg');
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.Portfolio a { /* Correction de la majuscule */
+    color: aliceblue;
+    padding: 0px 20px; /* Correction de 'Opx' en '0px' */
+    border: 1px solid #fff;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 900;
+    text-shadow: rgba(0, 0, 0, 0.7);
+}
+
+.Portfolio span { /* Correction de la majuscule */
+    color: rgb(238, 56, 11);
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+ul {
+    list-style: none;
+    float: right;
+    display: flex;
+    margin-top: 20px; /* Correction de '2Opx' en '20px' */
+}
+
+ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    border: 1px solid transparent;
+    margin: 10px;
+    font-weight: 500;
+    transition: 0.6s ease;
+}
+
+ul li a:hover {
+    background: #fff;
+    color: black;
+}
+
+ul li.active a {
+    background: #fff;
+    color: black;
+}
+
+.principale {
+    max-width: 114rem;
+    margin: 0 auto;
+}
+
+.titre {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.titre h1 {
+    color: white;
+    font-size: 70px;
+}

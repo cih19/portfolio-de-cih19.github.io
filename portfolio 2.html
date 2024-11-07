@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="portfolio 2 css.css">
+    <title>Mon portfolio</title>
+</head>
+<body>
+    <header>
+        <div class="principale">
+            <div class="logo"></div>
+        </div>
+        <!-- Menu d'onglets -->
+        <ul>
+            <li class="active"><a href="#" onclick="showContent('info-personnelles')">Informations personnelles</a></li>
+            <li><a href="#" onclick="showContent('experiences')">Expériences professionnelles</a></li>
+            <li><a href="#" onclick="showContent('realisations')">Réalisations personnelles et compétences</a></li>
+            <li><a href="#" onclick="showContent('news')">News</a></li>
+        </ul>
+    </header>
+
+    <!-- Sections cachées par défaut -->
+    <div id="info-personnelles" class="content" style="display: block;">
+        <h2>Mes Informations Personnelles</h2>
+        <p>Je suis [Votre Nom].</p>
+        <p>Je travaille en tant que [Votre Profession].</p>
+        <p>Mon email est [Votre Email].</p>
+    </div>
+
+    <div id="experiences" class="content" style="display: none;">
+        <h2>Mes Expériences Professionnelles</h2>
+        <p>[Votre expérience ici]</p>
+    </div>
+
+    <div id="realisations" class="content" style="display: none;">
+        <h2>Mes Réalisations</h2>
+        <p>[Vos réalisations ici]</p>
+    </div>
+
+    <div id="news" class="content" style="display: none;">
+        <h2>News et Veille Technologique</h2>
+        <p>[Vos commentaires, liens, veille technologique ici]</p>
+    </div>
+
+    <script>
+        // Fonction pour afficher le contenu au clic sur l'onglet
+        function showContent(id) {
+            // Masquer toutes les sections
+            var contents = document.querySelectorAll('.content');
+            contents.forEach(function(content) {
+                content.style.display = 'none';
+            });
+
+            // Afficher la section cliquée
+            document.getElementById(id).style.display = 'block';
+
+            // Mettre à jour les onglets pour afficher lequel est actif
+            var links = document.querySelectorAll('ul li');
+            links.forEach(function(link) {
+                link.classList.remove('active');
+            });
+
+            // Ajouter la classe 'active' à l'onglet cliqué
+            var clickedLink = document.querySelector('a[href="#' + id + '"]').parentElement;
+            clickedLink.classList.add('active');
+        }
+    </script>
+</body>
+</html>
